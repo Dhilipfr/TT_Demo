@@ -11,12 +11,13 @@ using Android.Views;
 using Android.Widget;
 using Android.Graphics;
 using System.Net;
+using TT_Demo.Model;
 
 namespace TT_Demo.Droid.Activities
 {
-    class CustomPlayerCell : BaseAdapter<Player>
+    class CustomPlayerCell : BaseAdapter<MyMatchInfo>
     {
-        public List<Player> mItem;
+        public List<MyMatchInfo> mItem;
         private Context context;
         public override int Count
         {
@@ -26,7 +27,7 @@ namespace TT_Demo.Droid.Activities
             }
         }
 
-        public CustomPlayerCell(Context Ccontext, List<Player> Items)
+        public CustomPlayerCell(Context Ccontext, List<MyMatchInfo> Items)
         {
             context = Ccontext;
             mItem = Items;
@@ -45,19 +46,19 @@ namespace TT_Demo.Droid.Activities
 
             TextView lblFirstName = row.FindViewById<TextView>(Resource.Id.lblFirstName);
 
-            lblFirstName.Text = mItem[position].Firstname;
+            lblFirstName.Text = mItem[position].OpponentFullName;
 
             TextView lblTotalPlayes = row.FindViewById<TextView>(Resource.Id.lblTotalPlayed);
 
-            lblTotalPlayes.Text = mItem[position].TotalPlayed;
+            lblTotalPlayes.Text = mItem[position].Point.ToString();
 
             TextView lblTotalWin = row.FindViewById<TextView>(Resource.Id.lblTotalWin);
 
-            lblTotalWin.Text = mItem[position].TotalPlayed;
+            lblTotalWin.Text = mItem[position].MatchStatus.ToString();
 
             TextView lblTotalLost = row.FindViewById<TextView>(Resource.Id.lblTotalLost);
 
-            lblTotalLost.Text = mItem[position].TotalPlayed;
+            lblTotalLost.Text = mItem[position].OpponentID.ToString();
 
             return row;
 
@@ -69,7 +70,7 @@ namespace TT_Demo.Droid.Activities
             return position;
         }
 
-        public override Player this[int position]
+        public override MyMatchInfo this[int position]
         {
             get
             {
