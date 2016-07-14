@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/parentLayout">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/TopLayout"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon"
+            android:id="@+id/appView" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:id="@+id/InnerLayout"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Player Name"
+                android:id="@+id/lblTopFirstName"
+                android:textSize="16dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Total Played"
+                android:id="@+id/lblTopTotalPlayed"
+                android:textSize="16dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Total Win"
+                android:id="@+id/lblTopTotalWin"
+                android:textSize="16dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Total Lost"
+                android:id="@+id/lblTopTotalLost"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playerList" />
+</LinearLayout>
