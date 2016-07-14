@@ -21,6 +21,12 @@ namespace TT_Demo.Model
         public int TotelPoint { get; set; }
     }
 
+    public class RootObject
+    {
+        public bool Status { get; set; }
+        public List<MyMatchInfo> Message { get; set; }
+    }
+
     public class MyMatchInfo
     {
         public long ID { get; set; }

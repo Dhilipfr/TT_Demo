@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>652d54bb-0028-406b-924e-58e7f477bf5d</ProjectGuid>
+    <ProjectGuid>{652D54BB-0028-406B-924E-58E7F477BF5D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>TT_Demo.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
